@@ -1,0 +1,10 @@
+/Debug/
+/Release/
+/build/
+/data/
+/img/
+*.prefs
+.project
+.cproject
+*.*~
+!.gitignore
