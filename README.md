@@ -8,6 +8,7 @@ $ mkdir build
 $ cd build
 $ cmake ../
 $ make 
+$ cd x86_64/bin/
 $ ./imagenet-console model=googlenet batch_size=3
 ```
 batch_size: the maxBatchSize.
@@ -127,5 +128,17 @@ class 2954 - 0.998964  (banana)
 
 shutting down...
 ```
-
-
+if change runbatchsize in imagenet-console.cpp to 2, that means to run 2 images at one time:
+```
+[GIE]  Accumulated network time - 5.675040 ms
+class 0950 - 0.978982  (orange)
+class 0951 - 0.020888  (lemon)
+class 1287 - 0.986145  (lynx, catamount)
+```
+if change runbatchsize in imagenet-console.cpp to 1, that means to run 1 image at one time:
+```
+[GIE]  Accumulated network time - 4.251647 ms
+class 0950 - 0.978982  (orange)
+class 0951 - 0.020888  (lemon)
+```
+You can see that, with batch inference, the time to run is saved.
