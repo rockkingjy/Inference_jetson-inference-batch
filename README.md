@@ -1,6 +1,7 @@
 # Batch inference version of [jetson-inference](https://github.com/dusty-nv/jetson-inference).
-1. Copy /data in depository [jetson-inference](https://github.com/dusty-nv/jetson-inference)：
-2. Command:
+1. Download this repository.
+2. Copy /data/ in depository [jetson-inference](https://github.com/dusty-nv/jetson-inference) to this root repository.
+3. Run commands:
 
 ```
 $ cd jetson-inference-batch
