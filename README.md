@@ -161,3 +161,9 @@ cd build
 cmake ../
 make -j
 ```
+Results on TX1:
+```
+1 image : Accumulated network time - 43.625263 ms
+2 images: Accumulated network time - 53.076714 ms
+3 images: Accumulated network time - 60.256248 ms
+```
