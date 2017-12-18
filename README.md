@@ -1,8 +1,8 @@
 # Batch inference version of [jetson-inference](https://github.com/dusty-nv/jetson-inference).
+## Run on x86_64 computer:
 1. Download this repository.
 2. Copy /data/ in depository [jetson-inference](https://github.com/dusty-nv/jetson-inference) to this root repository.
 3. Run commands:
-
 ```
 $ cd jetson-inference-batch
 $ mkdir build
@@ -143,3 +143,21 @@ class 0950 - 0.978982  (orange)
 class 0951 - 0.020888  (lemon)
 ```
 You can see that, with batch inference, the time to run is saved.
+
+## Run on TX1/TX2:
+Replace the following part in CMakeLists.txt 
+```
+include_directories(/usr/include/gstreamer-1.0 /usr/lib/x86_64-linux-gnu/gstreamer-1.0/include /usr/include/glib-2.0 /usr/include/libxml2 /usr/lib/x86_64-linux-gnu/glib-2.0/include/)
+```
+with:
+```
+include_directories(/usr/include/gstreamer-1.0 /usr/lib/aarch64-linux-gnu/gstreamer-1.0/include /usr/include/glib-2.0 /usr/include/libxml2 /usr/lib/aarch64-linux-gnu/glib-2.0/include/)
+```
+then:
+```
+cd jetson-inference/
+mkdir build
+cd build
+cmake ../
+make -j
+```
