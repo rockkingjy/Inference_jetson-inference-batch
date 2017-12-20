@@ -3,7 +3,10 @@
 /build/
 /data/
 /img/
+*/CMakeFiles/
+*.cmake
 *.prefs
+*.Makefile
 .project
 .cproject
 *.*~
